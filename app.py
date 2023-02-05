@@ -22,14 +22,14 @@ if uploaded_file is not None:
         return csv
     df = load_csv()
     pr = ProfileReport(df, explorative=True)
-    st.header('**Input DataFrame**')
+    st.header('Input DataFrame')
     st.write(df)
     st.write('---')
     st.header('**Pandas Profiling Report**')
     st_profile_report(pr)
 else:
-    st.info('Awaiting for CSV file to be uploaded.')
-    if st.button('Press to use Example Dataset'):
+    st.info('En attente du téléchargement du fichier CSV.')
+    if st.button("Appuyez pour utiliser l'ensemble de données d'exemple"):
         # Example data
         @st.cache
         def load_data():
@@ -40,8 +40,8 @@ else:
             return a
         df = load_data()
         pr = ProfileReport(df, explorative=True)
-        st.header('**Input DataFrame**')
+        st.header('Input DataFrame')
         st.write(df)
         st.write('---')
-        st.header('**Pandas Profiling Report**')
+        st.header('Pandas Profiling Report')
         st_profile_report(pr)
