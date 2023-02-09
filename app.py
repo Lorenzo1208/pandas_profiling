@@ -9,7 +9,7 @@ st.title('Pandas Profiling Report')
 
 # Upload CSV data
 with st.sidebar.header('1. Télécharger votre fichier CSV'):
-    uploaded_file = st.sidebar.file_uploader("Importer votre fichier CSV", type=["csv"])
+    uploaded_file = st.sidebar.file_uploader("Importer votre fichier CSV", type=["csv,tsv"])
     st.sidebar.markdown("""
 [Example CSV input file](https://raw.githubusercontent.com/dataprofessor/data/master/delaney_solubility_with_descriptors.csv)
 """)
